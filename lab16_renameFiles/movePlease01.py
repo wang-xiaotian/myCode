@@ -8,6 +8,7 @@ TARGET_FILE2 = "kerrigan.obj"
 TARGET_FOLDER ="ceph_storage/"
 
 os.chdir(HOME)
+#name need to include .filetype
 xname = input("what is the new name for kerrigan.obj?\n>")
 
 shutil.move(TARGET_FILE1, TARGET_FOLDER)
