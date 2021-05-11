@@ -2,7 +2,7 @@
 import shutil 
 import os # os dependent functionality
 
-HOME = "c:/Python/myCode"
+HOME = "/home/student/myCode"
 TARGET_FILE = "copy.txt"
 COPIED_FILE = "copy2.txt"
 TARGET_FOLDER = "/lab6/"
