@@ -1,9 +1,10 @@
+
+#!/usr/bin/env python3
+
 # TLG python project topic: can you waste $1 million within a week?
 # the purpose of this project is to practice if-else logic
 # ONLY used integer in this project
 # perfect target price: {"Day 1-7: selection 4,6,1,3,5,6"}
-#!/usr/bin/env python3
-
 # 7 days and each day has 6 items to choose
 DAYS_ITEMS_PRICES = [[135315,238917,345262,254153,123153,214253],[325415,133928,21929,451133,223233,111263],[75415,141224,61323,271251,63232,21268],[95413,51126,91629,24257,123232,211268],[99433,191141,113224,74551,173134,91326],[165311,31326,61324,114257,113739,161263],[195413,21124,12629,27257,133143,131449]] # items you can buy in 7 days
 DAYS_TOPIC = ['Choose a hotel suite to stay in all week:', 'Choose a car to rent for the rest of the week:', 'Choose a venue to throw a kick-ass party:', 'Hire a celebrity to perform a private concert:', 'Choose a pricey restaurant to take 11 of your pals for dinner:', 'Choose an expensive bottle of wine to drink in one sitting:','Finally, choose a luxury SPA treatment so you can relax after a hard week of spending:']
