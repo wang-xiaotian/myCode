@@ -15,7 +15,7 @@ def farmPicker(farmsList, farmName):
     return result
 
 # if animal is true, only collect animal
-def farmPickerByType(farmsList, farmName, animalOnly):
+def farmPickerByType(farmsList, farmName, animalOnly=False):
     result = []
     myFarms = farmPicker(farmsList, farmName)
     for item in myFarms:
@@ -28,6 +28,21 @@ def farmPickerByType(farmsList, farmName, animalOnly):
                 result.append(thing)
     return result
 
+# collect user input
+def userChoice():
+    for i in range(0, len(farms)):
+        print(f'Farm ID:{i} - {farms[i]["name"]}')
+    while True:
+        try:
+            userInput = input("Choose your farm by entering Farm ID:\n>")
+            farmId = int(userInput)
+            if farmId >= len(farms) and farmId < 0:
+                break
+            else:
+                return farms[farmId]["name"]
+        except:
+            print("Invalid Input")
+
 # Function 1
 # • Write a for loop that returns all the animals from the NE Farm!
 print(farmPickerByType(farms, "NE Farm", True))
@@ -35,8 +50,10 @@ print(farmPickerByType(farms, "SE Farm", True))
 
 # Function 2
 # • Ask a user to choose a farm (NE Farm, W Farm, or SE Farm). Return the plants/animals that are raised on that farm.
-print(farmPickerByType(farms, "SE Farm", False))
+userFarm = userChoice()
+print(farmPickerByType(farms, userFarm))
 
 # Function 3
 # • Ask a user to choose a farm (NE Farm, W Farm, or SE Farm)... but only return ANIMALS from that particular farm.
-
+userFarm = userChoice()
+print(farmPickerByType(farms, userFarm, True)) # only animals
