@@ -1,16 +1,25 @@
+<<<<<<< HEAD
+=======
 
+>>>>>>> 34eedba502b14911390337496c8e2db3e23447e1
 #!/usr/bin/env python3
 
 # TLG python project topic: can you waste $1 million within a week?
 # the purpose of this project is to practice if-else logic
 # ONLY used integer in this project
 # perfect target price: {"Day 1-7: selection 4,6,1,3,5,6"}
+<<<<<<< HEAD
+# 7 days and each day has 6 items to choose items you can buy in 7 days
+DAYS_ITEMS_PRICES = [[135315,238917,345262,254153,123153,214253],[325415,133928,21929,451133,223233,111263],[75415,141224,61323,271251,63232,21268],[95413,51126,91629,24257,123232,211268],[99433,191141,113224,74551,173134,91326],[165311,31326,61324,114257,113739,161263],[195413,21124,12629,27257,133143,131449]]
+=======
 # 7 days and each day has 6 items to choose
 DAYS_ITEMS_PRICES = [[135315,238917,345262,254153,123153,214253],[325415,133928,21929,451133,223233,111263],[75415,141224,61323,271251,63232,21268],[95413,51126,91629,24257,123232,211268],[99433,191141,113224,74551,173134,91326],[165311,31326,61324,114257,113739,161263],[195413,21124,12629,27257,133143,131449]] # items you can buy in 7 days
+>>>>>>> 34eedba502b14911390337496c8e2db3e23447e1
 DAYS_TOPIC = ['Choose a hotel suite to stay in all week:', 'Choose a car to rent for the rest of the week:', 'Choose a venue to throw a kick-ass party:', 'Hire a celebrity to perform a private concert:', 'Choose a pricey restaurant to take 11 of your pals for dinner:', 'Choose an expensive bottle of wine to drink in one sitting:','Finally, choose a luxury SPA treatment so you can relax after a hard week of spending:']
-DAYS_ITEMS = [['Royal 1', 'Royal 2', 'Royal 3', 'Royal 4','Royal 5','Royal 6'],['Ferrari 458 Italia', 'Maserati GranCabrio', 'Rolls Royce Phantom', 'Mayback 57S', 'McLaren MP4-12C', 'Lamborghini Ballardo Spyder'],['Madison Square, New York', 'Little Palm Island, Florida', 'The biltmore estate, North Carolina', 'Pelican Hill, CA', 'Odescalchi Castle, Italy', 'Chateaus Vaus-le-Vicomte'],['Aril Lavigne','Selena Gomez', 'Kendrick Lamar', 'Carly Rae Jepsen', 'Jason Drulo', 'Avicii'],['Sublimotion, Ibiza', 'Plaza Athenee, Paris', 'Ithaa Undersee Resturant', 'Aragawa, Tokyo', 'Restaurant Crissier, Switzerland', ' Masa, New York City'],['Chateau Margaus classe 1900', 'Domaine de la Romanee-Conti 1990', 'Chateau Lafite 1865', 'Heidsieck 1907', 'Chateau Mouton-Rothschild 1945', 'Cheval Blanc 1947'],["Evian Bath", "Gold Facial", "Diamond Massage", "Clay Body Treatment", "Turkish Bash", "Fish Pedicure"]]
-PRICE = 1000000 # target price
 
+DAYS_ITEMS = [['Royal 1', 'Royal 2', 'Royal 3', 'Royal 4','Royal 5','Royal 6'],['Ferrari 458 Italia', 'Maserati GranCabrio', 'Rolls Royce Phantom', 'Mayback 57S', 'McLaren MP4-12C', 'Lamborghini Ballardo Spyder'],['Madison Square, New York', 'Little Palm Island, Florida', 'The biltmore estate, North Carolina', 'Pelican Hill, CA', 'Odescalchi Castle, Italy', 'Chateaus Vaus-le-Vicomte'],['Aril Lavigne','Selena Gomez', 'Kendrick Lamar', 'Carly Rae Jepsen', 'Jason Drulo', 'Avicii'],['Sublimotion, Ibiza', 'Plaza Athenee, Paris', 'Ithaa Undersee Resturant', 'Aragawa, Tokyo', 'Restaurant Crissier, Switzerland', ' Masa, New York City'],['Chateau Margaus classe 1900', 'Domaine de la Romanee-Conti 1990', 'Chateau Lafite 1865', 'Heidsieck 1907', 'Chateau Mouton-Rothschild 1945', 'Cheval Blanc 1947'],["Evian Bath", "Gold Facial", "Diamond Massage", "Clay Body Treatment", "Turkish Bash", "Fish Pedicure"]]
+
+PRICE = 1000000
 
 #greeting message
 def welcome():
@@ -22,7 +31,7 @@ def welcome():
     # requirement
     print("In order to receive your $1,000,000 stimulus check. You have to spend exact $1,000,000 in one week, but you won't be shown any of the prices of the things you are buying.\nIf you cannot meet this requirement, the stimulus check will be moved to next lucky person. YOU ARE RESPONSIBLE FOR ALL YOURE EXPENSES. Have fun!\n")
 
-# collection user input and calculate price
+#collection user input and calculate price
 def gameStarts():
     totalPrice = 0;
     print(f"Warning: You can quit this program anytime by typing \"exit\" and press Enter.\n\n")
