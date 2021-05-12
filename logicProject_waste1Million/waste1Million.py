@@ -10,10 +10,6 @@ DAYS_TOPIC = ['Choose a hotel suite to stay in all week:', 'Choose a car to rent
 DAYS_ITEMS = [['Royal 1', 'Royal 2', 'Royal 3', 'Royal 4','Royal 5','Royal 6'],['Ferrari 458 Italia', 'Maserati GranCabrio', 'Rolls Royce Phantom', 'Mayback 57S', 'McLaren MP4-12C', 'Lamborghini Ballardo Spyder'],['Madison Square, New York', 'Little Palm Island, Florida', 'The biltmore estate, North Carolina', 'Pelican Hill, CA', 'Odescalchi Castle, Italy', 'Chateaus Vaus-le-Vicomte'],['Aril Lavigne','Selena Gomez', 'Kendrick Lamar', 'Carly Rae Jepsen', 'Jason Drulo', 'Avicii'],['Sublimotion, Ibiza', 'Plaza Athenee, Paris', 'Ithaa Undersee Resturant', 'Aragawa, Tokyo', 'Restaurant Crissier, Switzerland', ' Masa, New York City'],['Chateau Margaus classe 1900', 'Domaine de la Romanee-Conti 1990', 'Chateau Lafite 1865', 'Heidsieck 1907', 'Chateau Mouton-Rothschild 1945', 'Cheval Blanc 1947'],["Evian Bath", "Gold Facial", "Diamond Massage", "Clay Body Treatment", "Turkish Bash", "Fish Pedicure"]];
 PRICE = 1000000 # target price
 
-# entrance
-def main() :
-    welcome()
-    gameStarts()
 
 #greeting message
 def welcome():
@@ -83,6 +79,11 @@ def printItems(day):
 # return how much left over
 def calculateLeftOver(expense):
     return expense - PRICE
+
+# entrance
+def main() :
+    welcome()
+    gameStarts()
 
 if __name__ == "__main__":
     main()
