@@ -10,11 +10,11 @@ def printStairs(num):
     # increase 
     for i in range(1, num):
         printDots(i)
-        print()
+        print("<br>")
     # decrease
     for i in range(num, 0, -1):
         printDots(i)
-        print()
+        print("<br>")
 
 # wrap up solution 1
 def dotsPrinting1(num):
@@ -27,7 +27,7 @@ def printDotsDecrese(num):
         return
     else:
         printDots(num)
-        print()
+        print("<br>")
         printDotsDecrese(num-1)
 
 # increase number of dots for solution 2
@@ -37,7 +37,7 @@ def printDotsIncrease(num):
     else:
         printDotsIncrease(num-1)
         printDots(num)
-        print()
+        print("<br>")
 
 # wrap up solution 2
 def dotsPrinting2(num):
@@ -45,5 +45,5 @@ def dotsPrinting2(num):
     printDotsDecrese(num-1)
 
 # output
-dotsPrinting1(5)
-dotsPrinting2(5)
+dotsPrinting1(30)
+dotsPrinting2(30)
