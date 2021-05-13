@@ -40,7 +40,6 @@ def findThreePuzzles():
             answer = findTwoPuzzles(TARGET - int(value))
             if answer:
                 return answer * int(value)
-        
     except:
         print("something bad happend in three puzzels")
 
