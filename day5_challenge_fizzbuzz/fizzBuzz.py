@@ -7,6 +7,9 @@ def fizzBuzz(min, max):
              print('fizz ', end='')
         elif i % 5 == 0 and i != 0:
             print('buzz ', end='')
+        # 3 * 5 = 15 
+        elif i % 15 == 0:
+            print('fizzBuzz', end='')
         else:
             print(f'{i} ', end='')
     print("\nDone")
