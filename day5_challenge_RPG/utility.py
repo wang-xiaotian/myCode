@@ -1,4 +1,4 @@
-from player import Player 
+#from player import Player 
 from item import Item
 
 FLASH_LIGHT = Item('flash light', 'lighting the whole room')

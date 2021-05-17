@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-from utility import showStatus, playerNextMove, validUserInput, userAction, gameContinue, createPlayer
+from utility import showStatus, playerNextMove, validUserInput, userAction, gameContinue
 
 
 '''
