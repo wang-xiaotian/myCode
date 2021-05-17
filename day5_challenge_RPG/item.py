@@ -18,6 +18,5 @@ class Item:
     def __str__(self):
         return f'(Item name: {self.name}, Item Description: {self.description})'
     
-    # def __iter__(self):
-    #     yield 'name', self.name
-    #     yield 'description', self.description
+    def __iter__(self):
+        yield  self.name, self.description

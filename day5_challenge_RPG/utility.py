@@ -21,12 +21,12 @@ ROOMS = {
             'Hall' : {
                   'south' : 'Kitchen',
                   'east'  : 'Dining Room',
-                  'item'  : {FLASH_LIGHT.name : FLASH_LIGHT.description}
+                  'item'  : {}
                 },
 
             'Kitchen' : {
                   'north' :'Hall',
-                  'item'  : {MONSTER.name: MONSTER.description} #TODO add list of items 
+                  'item'  : {}
                 },
             'Dining Room' : {
                   'west' : 'Hall',
@@ -37,7 +37,7 @@ ROOMS = {
                },
             'Garden' : {
                   'north' : 'Dining Room',
-                  'item' : {FLOWER.name : FLOWER.description, FRUIT.name : FRUIT.description}
+                  'item' : {}
                },
             'Pantry' : {
                   'south' : 'Dining Room',
@@ -47,6 +47,13 @@ ROOMS = {
                   'item' : {KEY.name: KEY.description}
             }
          }
+
+ROOMS['Hall']['item'].update(FLASH_LIGHT)
+ROOMS['Kitchen']['item'].update(MONSTER)
+ROOMS['Garden']['item'].update(FLOWER)
+ROOMS['Garden']['item'].update(FRUIT)
+
+
 
 ''' 
 show player's current inventory and position status
@@ -62,7 +69,7 @@ def showStatus():
       if "item" in ROOMS[CURRENT_ROOM]:
             print(f'You see items in {CURRENT_ROOM}:')
             for i in ROOMS[CURRENT_ROOM]['item']:
-                  print(i)
+                  print(str(i))
       else:
             print(f'This {CURRENT_ROOM} is empty.')
       print("---------------------------")
