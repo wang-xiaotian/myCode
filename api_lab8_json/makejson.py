@@ -1,0 +1,46 @@
+#!/usr/bin/env python3
+
+"""Reviewing how to parse json | Alta3 Research"""
+
+# JSON is part of the Python Standard Library
+import json
+
+def main():
+    """runtime code"""
+    ## create a blob of data to work with
+    hitchhikers = [{"name": "Zaphod Beeblebrox", "species": "Betelgeusian"},
+      {"name": "Arthur Dent", "species": "Human"}]
+        
+    ## display our Python data (a list containing two dictionaries)
+    print(hitchhikers)
+    
+    # ## open a new file in write mode
+    with open("./api_lab8_json/galaxyguide.json", "w") as zfile:
+        ## use the JSON library
+        ## USAGE: json.dump(input data, file like object) ##
+        json.dump(hitchhikers, zfile)
+    
+    # create json string
+    jsonString = json.dumps(hitchhikers)
+    print(jsonString)
+    print(type(jsonString))
+
+    # open file
+    with open("./api_lab8_json/datacenter.json", 'r') as dataCenter:
+        dataCenterString = dataCenter.read()
+    
+    print(dataCenterString)
+    print(type(dataCenterString))
+
+    # create the json string
+    dataCenterDecoded = json.loads(dataCenterString)
+    print(dataCenterDecoded)
+    print(type(dataCenterDecoded))
+
+    # access to dic
+    print(dataCenterDecoded['row3'])
+    print(dataCenterDecoded['row2'][1])
+
+
+if __name__ == "__main__":
+    main()
