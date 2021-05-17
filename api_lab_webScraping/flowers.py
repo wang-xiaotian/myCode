@@ -48,25 +48,6 @@ def log_error(e):
     """
     print(e)
 
-def readDataBS4(raw_html, type):
-    # retrieve the raw HTML using the open function then read in the data
-    # raw_html = simple_get('https://alta3.com')
-    # use the backend parser 'html.parser' to parse out the raw_html
-    html = BeautifulSoup(raw_html, 'html.parser')
-
-    # the select method on the html object allows the selection of
-    # CSS selectors to locate elements in the document
-    # return a list of paragraph elements (dict like)
-    for p in html.select(type):
-        print(p)
-
-def read100Names(url):
-    raw_html = simple_get(url)
-    html = BeautifulSoup(raw_html, 'html.parser')
-    for li in html.select("li"):
-        print(type(li))
-        print()
-
 def readFlowers(url):
     raw_html = simple_get(url)
     html = BeautifulSoup(raw_html, 'html.parser')
