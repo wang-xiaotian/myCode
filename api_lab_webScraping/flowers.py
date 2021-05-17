@@ -64,7 +64,9 @@ def readFlowers(url):
 
 
 def main():
-    print(len(readFlowers('https://florgeous.com/types-of-flowers/')))
+    flowers = readFlowers('https://florgeous.com/types-of-flowers/')
+    for key, value in flowers.items():
+        print(f"Name: {key}, Description: {value}")
         
 
 if __name__ == "__main__":
