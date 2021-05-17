@@ -41,6 +41,15 @@ def main():
     print(dataCenterDecoded['row3'])
     print(dataCenterDecoded['row2'][1])
 
+        # open file
+    with open("./api_lab8_json/galaxyguide.json", 'r') as dataGalaxy:
+        dataGalaxyString = dataGalaxy.read()
+    print(dataGalaxyString)
+        # create the json string
+    dataCenterDecoded = json.loads(dataGalaxyString)
+    print(dataCenterDecoded)
+    print(type(dataCenterDecoded))
+
 
 if __name__ == "__main__":
     main()
