@@ -171,6 +171,5 @@ def gameContinue():
     else:
         return True
 
-def createPlayer():
-      player = Player()
-      print(player.name)
+# TODO: create Player
+# TODO: create Room
