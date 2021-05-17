@@ -48,6 +48,9 @@ def log_error(e):
     """
     print(e)
 
+'''
+return dictionary of flowers with key: name and value: description
+'''
 def readFlowers(url):
     raw_html = simple_get(url)
     html = BeautifulSoup(raw_html, 'html.parser')
