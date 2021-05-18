@@ -27,7 +27,7 @@ def displayGetRequestNasa(url, credFile, query):
     # print(f'reponse length: {apodurObj.length}')
 
     apod = json.loads(apodurObj.read().decode('utf-8'))
-    pprint.pprint(apod)
+    #pprint.pprint(apod)
     return apod
 
 # read date from user
@@ -47,12 +47,23 @@ def queryNasaStartEnd(api, credFile):
     query = f'&start_date={startDate}'
     return displayGetRequestNasa(ASTD_API_URL, CRED_FILE, query)
 
-def main():
+def largestId():
     apod = queryNasaStartEnd(ASTD_API_URL, CRED_FILE)
+    largestId = 0
     for a in apod:
         print(a)
     print(f'Element count: {apod["element_count"]}')
-    print(f'Element count: {apod["near_earth_objects"]}')
+    for i in apod["near_earth_objects"]:
+        print(i)
+        for j in apod['near_earth_objects'][i]:
+            print(int(j['id']))
+            if int(j['id']) > largestId:
+                largestId = int(j['id'])
+    print(f'Largest Id: {largestId}')
+    
+
+def main():
+    largestId()
 
 
     #displayGetRequestNasa(ASTD_API_URL, CRED_FILE,'&start_date=2010-01-01&end_date=2020-01-01')
