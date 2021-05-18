@@ -1,5 +1,6 @@
 #!/usr/bin/dev python3
 
+from os import close
 import urllib.request
 import datetime
 import json
@@ -60,10 +61,21 @@ def largestId():
             if int(j['id']) > largestId:
                 largestId = int(j['id'])
     print(f'Largest Id: {largestId}')
-    
+
+def closest():
+    apod = queryNasaStartEnd(ASTD_API_URL, CRED_FILE)
+    cloest_dis = 0
+    for i in apod["near_earth_objects"]:
+        #print(i)
+        for j in apod['near_earth_objects'][i]:
+            #pprint.pprint(j)
+            miss_dis = float(j['close_approach_data'][0]['miss_distance']['miles'])
+            if( miss_dis > cloest_dis):
+                cloest_dis = miss_dis
+    print(f'closest distance: {cloest_dis} miles')
 
 def main():
-    largestId()
+    closest()
 
 
     #displayGetRequestNasa(ASTD_API_URL, CRED_FILE,'&start_date=2010-01-01&end_date=2020-01-01')
