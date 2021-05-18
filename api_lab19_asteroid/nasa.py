@@ -51,7 +51,9 @@ def main():
     apod = queryNasaStartEnd(ASTD_API_URL, CRED_FILE)
     for a in apod:
         print(a)
-    print(f'Element count: {apod.element_count}')
+    print(f'Element count: {apod["element_count"]}')
+    print(f'Element count: {apod["near_earth_objects"]}')
+
 
     #displayGetRequestNasa(ASTD_API_URL, CRED_FILE,'&start_date=2010-01-01&end_date=2020-01-01')
 
