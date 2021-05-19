@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 import requests
 import pprint
+import numpy as np
 
 AOIF_CHAR = "https://www.anapioficeandfire.com/api/characters/"
 
@@ -15,17 +16,22 @@ def main():
         got_dj = gotresp.json()
         pprint.pprint(got_dj)
 
-        print(f'Name: {got_dj["name"]}')
+        books = [] # list of books
+        proBooks = [] # list of pro books
+        allegs = [] # list of allegs
 
-        booksAPIs = got_dj['books'] #book apis
-        allegiancesAPIs = got_dj['allegiances'] 
+        for i in got_dj:
+            booksAPIs = i['books'] #book apis
+            povBooksAPIs = i['povBooks'] #probook apis
+            allegiancesAPIs = i['allegiances'] 
+            #if len(booksAPIs) > 0:
+            books.extend(infoCollector(booksAPIs, 'name'))
+            proBooks.extend(infoCollector(povBooksAPIs, 'name'))
+            allegs.extend(infoCollector(allegiancesAPIs, 'name'))
 
-        #if len(booksAPIs) > 0:
-        books = infoCollector(booksAPIs, 'name')
-        allegs = infoCollector(allegiancesAPIs, 'name')
-
-        print(books)
-        print(allegs)
+        print(f'books: {books}')
+        print(f'proBooks: {proBooks}')
+        print(f'allegs: {allegs}')
 
 
 '''
