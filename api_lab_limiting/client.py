@@ -1,5 +1,6 @@
 import requests
 
 URL = 'http://0.0.0.0:2224/fast'
-response = requests.get(URL)
-print(response.json)
+for i in range(201):
+    response = requests.get(URL)
+    print(f'#{i} fast request: {response.text}')
