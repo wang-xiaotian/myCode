@@ -26,6 +26,7 @@ app = Flask(__name__)
 def graphin():
     with open("/home/student/myCode/api_lab_flask/sshpass.yml") as sshpass: # creds for our servers
         creds = yaml.load(sshpass)
+    print(f"how many clients: {len(creds)}")
     svruptime = []
     xtick = []
     for cred in creds:
