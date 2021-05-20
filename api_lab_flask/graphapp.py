@@ -47,7 +47,7 @@ def graphin():
     plt.xticks(ind, xtick)
     plt.yticks(np.arange(0, 20, 1)) # prob want to turn this into a log scale
 
-    plt.savefig('static/status.png') # might want to save this with timestamp for history purposes
+    plt.savefig('/home/student/myCode/static/status.png') # might want to save this with timestamp for history purposes
     return render_template("graph.html")
 
 if __name__ == "__main__":
